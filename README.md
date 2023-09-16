@@ -2,8 +2,9 @@
 Estimate the transfer function of a system, from its **step response** (time series data).
 
 <p align="center">
-  <img width="40%" src="https://github.com/mare-mrgazo/TS2TF/assets/132171582/bf45a50d-389d-4b24-bc45-1543849149c2">
+  <img width="40%" src="https://github.com/mare-mrgazo/TS2TF.py/assets/132171582/13056431-ae36-4e3b-8c99-ae9c1ab9681b">
 </p>
+
 
  $$\ F(s)=\frac{73.5}{s^2+8.12*s+98} $$
 
