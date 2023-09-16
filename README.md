@@ -12,7 +12,7 @@ Estimate the transfer function of a system, from its **step response** (time ser
 ## Quickstart
 1. Clone the repo
    ```cmd
-   git clone https://github.com/mare-mrgazo/TS2TF.git
+   git clone https://github.com/mare-mrgazo/TS2TF.py.git
    ```
 2. Run example
    ```cmd
