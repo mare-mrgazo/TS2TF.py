@@ -16,7 +16,7 @@ Estimate the transfer function of a system, from its **step response** (time ser
    ```
 2. Run example
    ```cmd
-   python /TS2TF/example/main.py
+   python /TS2TF.py/example/main.py
    ```
 
 </br>
