@@ -1,27 +1,37 @@
 # TS2TF.py - *time series 2 transfer function*
-Estimate the transfer function of a system, from its **step response** (time series data).
+*Estimate the **transfer function** of a dynaimc system, from its **step response***.
 
 <p align="center">
   <img width="40%" src="https://github.com/mare-mrgazo/TS2TF.py/assets/132171582/13056431-ae36-4e3b-8c99-ae9c1ab9681b">
 </p>
 
-
  $$\ F(s)=\frac{73.5}{s^2+8.12*s+98} $$
-
-</br>
-
+ 
 ## Quickstart
 1. Clone the repo
-   ```cmd
+   ```python
    git clone https://github.com/mare-mrgazo/TS2TF.py.git
    ```
-2. Run example
-   ```cmd
+3. Run the example 
+   ```python
    python /TS2TF.py/example/main.py
    ```
+## Explanation
+*With this python module you can estimate the [transfer function](https://en.wikipedia.org/wiki/Transfer_function) of a dynamic system based on its [step response](https://en.wikipedia.org/wiki/Step_response). Under the hood, there's a simple iterative [gradient descent](https://en.wikipedia.org/wiki/Gradient_descent) optimization algorithm with a customizable [learning rate](https://en.wikipedia.org/wiki/Learning_rate) (denoted as **"L"**). This optimization algorithm seeks local minima of a user-selectable **error function***.
 
-</br>
-</br>
+## Error functions
+The arrays x and y each have a length of **n** and are **[normalized](https://www.statology.org/normalize-data-between-0-and-1/)**.
+
+1. ***ISE** (Integral of Squared Error):*
+ $$ISE =\frac{1}{n}\sum_{i=0}^{n}(y_i-y)^2$$
+ 
+2. ***ITSE** (Integral of Time Squared Error):*
+ $$ITSE =\frac{1}{n}\sum_{i=0}^{n}x_i(y_i-y)^2$$
+
+3. ***IITSE** (Integral of Inverse Time Squared Error):*
+ $$IITSE =\frac{1}{n}\sum_{i=0}^{n}(1-x_i)(y_i-y)^2$$
+
+## 
 
  ## TS2TF.SOS(x, y, epochs, L, K, ωn, ζ)
 
